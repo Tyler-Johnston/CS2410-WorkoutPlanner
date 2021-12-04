@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_custom_app_icon.xml" value="0.3212962962962963" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_create_plan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_plan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_plan.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_user_info.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_view_plan.xml" value="0.1707193515704154" />
+        <entry key="app/src/main/res/layout/fragment_view_plan_ideas.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/plan_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.31666666666666665" />
       </map>
     </option>
   </component>
