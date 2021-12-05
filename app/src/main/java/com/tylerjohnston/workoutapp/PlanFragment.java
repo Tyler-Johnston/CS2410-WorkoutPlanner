@@ -27,14 +27,6 @@ public class PlanFragment extends Fragment {
                     .commit();
         });
 
-        binding.viewPlanIdeasButton.setOnClickListener(view -> {
-            requireActivity().getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container_view, ViewPlanIdeasFragment.class, null)
-                    .addToBackStack(null)
-                    .commit();
-        });
-
         binding.removePlanButton.setOnClickListener(view -> {
 
             PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
@@ -44,11 +36,6 @@ public class PlanFragment extends Fragment {
             catch(Exception ex) {
             }
 
-//            requireActivity().getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .replace(R.id.fragment_container_view, RemovePlanFragment.class, null)
-//                    .addToBackStack(null)
-//                    .commit();
         });
 
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);

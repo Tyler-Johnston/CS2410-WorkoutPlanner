@@ -20,15 +20,15 @@ public class CreatePlanFragment extends Fragment {
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
         binding.savePlan.setOnClickListener(view -> {
             String title = binding.Title.getText().toString();
+            String sunday = binding.SundayPlan.getText().toString();
             String monday = binding.MondayPlan.getText().toString();
             String tuesday = binding.TuesdayPlan.getText().toString();
             String wednesday = binding.WednesdayPlan.getText().toString();
             String thursday = binding.ThursdayPlan.getText().toString();
             String friday = binding.FridayPlan.getText().toString();
             String saturday = binding.SaturdayPlan.getText().toString();
-            String sunday = binding.SundayPlan.getText().toString();
 
-            String[] contents = {monday, tuesday, wednesday, thursday, friday, saturday, sunday, title};
+            String[] contents = {sunday, monday, tuesday, wednesday, thursday, friday, saturday, title};
             viewModel.createPlan(contents);
 
             getActivity().getSupportFragmentManager().popBackStack();

@@ -7,12 +7,24 @@
     tools:context=".HomeFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/welcomeMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="56dp"
+        android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/todaysTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text='You do not have any plans created. Go to the "plans" subdirectory to create your first plan!'
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMessage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

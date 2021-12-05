@@ -16,16 +16,16 @@ public class PlanViewModel extends ViewModel {
     public void createPlan(String[] contents) {
 
         Plan newPlan = new Plan();
-        newPlan.Monday = contents[0];
-        newPlan.Tuesday = contents[1];
-        newPlan.Wednesday = contents[2];
-        newPlan.Thursday = contents[3];
-        newPlan.Friday = contents[4];
-        newPlan.Saturday = contents[5];
-        newPlan.Sunday = contents[6];
+        newPlan.Sunday = contents[0];
+        newPlan.Monday = contents[1];
+        newPlan.Tuesday = contents[2];
+        newPlan.Wednesday = contents[3];
+        newPlan.Thursday = contents[4];
+        newPlan.Friday = contents[5];
+        newPlan.Saturday = contents[6];
         newPlan.Title = contents[7];
 
-        String[] week = {"Monday: ", "Tuesday: ", "Wednesday: ", "Thursday: ", "Friday: ", "Saturday: ", "Sunday: "};
+        String[] week = {"Sunday: ", "Monday: ", "Tuesday: ", "Wednesday: ", "Thursday: ", "Friday: ", "Saturday: "};
 
         String buildDesc = "";
         for (int i = 0; i < 7; i++) {
@@ -41,10 +41,6 @@ public class PlanViewModel extends ViewModel {
     public void deletePlan(int index) {
         plans.remove(plans.get(index));
     }
-
-//    public void updatePlan(Plan plan, String newContent) {
-//
-//    }
 
 
 }
