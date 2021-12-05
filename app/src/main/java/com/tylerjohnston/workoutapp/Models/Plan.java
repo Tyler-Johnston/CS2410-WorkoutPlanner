@@ -2,6 +2,7 @@ package com.tylerjohnston.workoutapp.Models;
 
 public class Plan {
 
+    public int id;
     public String Title;
     public String Monday;
     public String Tuesday;

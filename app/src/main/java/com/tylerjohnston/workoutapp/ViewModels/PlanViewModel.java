@@ -7,8 +7,6 @@ import com.tylerjohnston.workoutapp.Models.Plan;
 
 public class PlanViewModel extends ViewModel {
 
-    // Nov 19th lecture
-
     private ObservableArrayList<Plan> plans = new ObservableArrayList<>();
 
     public ObservableArrayList<Plan> getPlans() {
@@ -35,18 +33,18 @@ public class PlanViewModel extends ViewModel {
         }
         newPlan.Description = buildDesc;
 
-        // add to data base
+        // add to database
         plans.add(newPlan);
 
     }
 
-    public void deletePlan(Plan plan) {
-
+    public void deletePlan(int index) {
+        plans.remove(plans.get(index));
     }
 
-    public void updatePlan(Plan plan, String newContent) {
-
-    }
+//    public void updatePlan(Plan plan, String newContent) {
+//
+//    }
 
 
 }

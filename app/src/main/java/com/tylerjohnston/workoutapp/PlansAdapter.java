@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
+import androidx.databinding.ObservableList;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.tylerjohnston.workoutapp.Models.Plan;
 
 public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.ViewHolder> {
@@ -17,6 +17,36 @@ public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.ViewHolder> 
 
     public PlansAdapter(ObservableArrayList<Plan> plans) {
         this.plans = plans;
+        this.plans.addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<Plan>>() {
+            @Override
+            public void onChanged(ObservableList<Plan> sender) {
+                notifyDataSetChanged();
+            }
+
+            @Override
+            public void onItemRangeChanged(ObservableList<Plan> sender, int positionStart, int itemCount) {
+
+                notifyItemRangeChanged(positionStart, itemCount);
+            }
+
+            @Override
+            public void onItemRangeInserted(ObservableList<Plan> sender, int positionStart, int itemCount) {
+
+                notifyItemRangeInserted(positionStart, itemCount);
+            }
+
+            @Override
+            public void onItemRangeMoved(ObservableList<Plan> sender, int fromPosition, int toPosition, int itemCount) {
+
+                notifyItemMoved(fromPosition, toPosition);
+            }
+
+            @Override
+            public void onItemRangeRemoved(ObservableList<Plan> sender, int positionStart, int itemCount) {
+
+                notifyItemRangeRemoved(positionStart, itemCount);
+            }
+        });
 
     }
 
@@ -36,7 +66,6 @@ public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.ViewHolder> 
 
         TextView descTextView = (TextView)holder.itemView.findViewById(R.id.planDesc);
         descTextView.setText(plans.get(position).Description);
-
     }
 
     @Override

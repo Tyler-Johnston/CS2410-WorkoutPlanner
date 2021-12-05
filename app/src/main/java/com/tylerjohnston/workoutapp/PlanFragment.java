@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.databinding.ObservableArrayList;
 import androidx.fragment.app.Fragment;
@@ -36,13 +35,27 @@ public class PlanFragment extends Fragment {
                     .commit();
         });
 
+        binding.removePlanButton.setOnClickListener(view -> {
+
+            PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
+            try {
+                viewModel.deletePlan(0);
+            }
+            catch(Exception ex) {
+            }
+
+//            requireActivity().getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container_view, RemovePlanFragment.class, null)
+//                    .addToBackStack(null)
+//                    .commit();
+        });
+
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
 
         ObservableArrayList<Plan> plans = viewModel.getPlans();
         binding.planRecyclerView.setAdapter(new PlansAdapter(plans));
         binding.planRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-
 
 
         return binding.getRoot();
