@@ -19,7 +19,6 @@ public class PlanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FragmentPlanBinding binding = FragmentPlanBinding.inflate(inflater, container, false);
 
-
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
         ObservableArrayList<Plan> plans = viewModel.getPlans();
 
@@ -40,7 +39,7 @@ public class PlanFragment extends Fragment {
             }
 
             if (plans.size() == 0) {
-                binding.planHint.setText(" Click the \"+\" icon to generate a new plan\n\nClick the \"-\" icon to delete your old plan after you've completed it");
+                binding.planHint.setText("Click the \"+\" icon to generate a new plan\n\nClick the \"-\" icon to remove your current plan upon completion");
             }
 
         });
@@ -49,10 +48,8 @@ public class PlanFragment extends Fragment {
             binding.planHint.setText("");
         }
 
-
         binding.planRecyclerView.setAdapter(new PlansAdapter(plans));
         binding.planRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
 
         return binding.getRoot();
 

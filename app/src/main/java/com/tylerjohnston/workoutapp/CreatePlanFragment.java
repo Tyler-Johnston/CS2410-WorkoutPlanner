@@ -19,6 +19,9 @@ public class CreatePlanFragment extends Fragment {
 
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
         binding.savePlan.setOnClickListener(view -> {
+
+            binding.errorMessage.setText("");
+
             String title = binding.Title.getText().toString();
             String sunday = binding.SundayPlan.getText().toString();
             String monday = binding.MondayPlan.getText().toString();
@@ -29,9 +32,14 @@ public class CreatePlanFragment extends Fragment {
             String saturday = binding.SaturdayPlan.getText().toString();
 
             String[] contents = {sunday, monday, tuesday, wednesday, thursday, friday, saturday, title};
-            viewModel.createPlan(contents);
 
-            getActivity().getSupportFragmentManager().popBackStack();
+            if (title.equals("")) {
+                binding.errorMessage.setText("Please enter a title for your plan");
+            }
+            else {
+                viewModel.createPlan(contents);
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
 
         });
 

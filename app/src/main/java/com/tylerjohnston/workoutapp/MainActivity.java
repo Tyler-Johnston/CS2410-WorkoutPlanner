@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(binding.getRoot());
 
-
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         binding.materialToolbar.setNavigationOnClickListener((view) -> {
 

@@ -27,29 +27,43 @@ public class HomeFragment extends Fragment {
 
         String[] week = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
         String dayOfWeek = week[dayNumber-1];
-        binding.welcomeMessage.setText("Hello, today is " + dayOfWeek + ". You need to complete the following tasks for the day:  ");
+        binding.welcomeMessage.setText("" + dayOfWeek + ": ");
 
         if (plans.size() != 0) {
             if (dayOfWeek.equals("Sunday")) {
-                binding.todaysTasks.setText(plans.get(0).Sunday);
+                if (!plans.get(0).Sunday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Sunday);
+                }
             }
             else if (dayOfWeek.equals("Monday")) {
-                binding.todaysTasks.setText(plans.get(0).Monday);
+                if (!plans.get(0).Monday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Monday);
+                }
             }
             else if (dayOfWeek.equals("Tuesday")) {
-                binding.todaysTasks.setText(plans.get(0).Tuesday);
+                if (!plans.get(0).Tuesday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Tuesday);
+                }
             }
             else if (dayOfWeek.equals("Wednesday")) {
-                binding.todaysTasks.setText(plans.get(0).Wednesday);
+                if (!plans.get(0).Wednesday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Wednesday);
+                }
             }
             else if (dayOfWeek.equals("Thursday")) {
-                binding.todaysTasks.setText(plans.get(0).Thursday);
+                if (!plans.get(0).Thursday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Thursday);
+                }
             }
             else if (dayOfWeek.equals("Friday")) {
-                binding.todaysTasks.setText(plans.get(0).Friday);
+                if (!plans.get(0).Friday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Friday);
+                }
             }
             else if (dayOfWeek.equals("Saturday")) {
-                binding.todaysTasks.setText(plans.get(0).Saturday);
+                if (!plans.get(0).Saturday.equals("")) {
+                    binding.todaysTasks.setText(plans.get(0).Saturday);
+                }
             }
         }
 

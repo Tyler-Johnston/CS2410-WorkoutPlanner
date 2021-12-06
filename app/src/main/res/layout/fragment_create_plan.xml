@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".CreatePlanFragment">>
+    tools:context=".CreatePlanFragment"
+    android:background="@color/editInfoBackground">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/savePlan"
@@ -144,19 +145,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/FridayPlan" />
 
-<!--            <EditText-->
-<!--                android:id="@+id/SundayPlan"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:ems="10"-->
-<!--                android:hint="Sunday:"-->
-<!--                android:inputType="textMultiLine"-->
-<!--                android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
-<!--                android:textSize="16sp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/Title" />-->
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
 
         </LinearLayout>
 

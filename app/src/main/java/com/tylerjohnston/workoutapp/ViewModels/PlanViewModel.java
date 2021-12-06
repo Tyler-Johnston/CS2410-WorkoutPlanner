@@ -29,7 +29,10 @@ public class PlanViewModel extends ViewModel {
 
         String buildDesc = "";
         for (int i = 0; i < 7; i++) {
-            buildDesc = buildDesc + week[i] + contents[i] + "\n";
+            if (!contents[i].equals("")) {
+                buildDesc = buildDesc + week[i] + contents[i] + "\n";
+            }
+
         }
         newPlan.Description = buildDesc;
 

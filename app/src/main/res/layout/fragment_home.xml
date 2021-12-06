@@ -9,6 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
         >
 
         <LinearLayout
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text='You do not have any plans created. Go to the "plans" subdirectory to create your first plan!'
+                android:text="You have no tasks for today"
                 android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,28 +43,6 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-<!--    <TextView-->
-<!--        android:id="@+id/welcomeMessage"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="56dp"-->
-<!--        android:text="TextView"-->
-<!--        android:textSize="24sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/todaysTasks"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text='You do not have any plans created. Go to the "plans" subdirectory to create your first plan!'-->
-<!--        android:textSize="21sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/welcomeMessage" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

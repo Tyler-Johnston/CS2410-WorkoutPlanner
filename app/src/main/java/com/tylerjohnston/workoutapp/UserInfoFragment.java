@@ -32,7 +32,7 @@ public class UserInfoFragment extends Fragment {
 
         if (user.isFilled) {
             binding.userName.setText(user.Name);
-            binding.calorieDescription.setText(user.Calories + "");
+            binding.calorieDescription.setText("Based on your personal information, you would need to consume " + user.Calories + " calories to maintain your current body weight");
 
         }
 

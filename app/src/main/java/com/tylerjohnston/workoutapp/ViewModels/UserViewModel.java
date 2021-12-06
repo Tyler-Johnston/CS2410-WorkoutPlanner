@@ -12,18 +12,18 @@ public class UserViewModel extends ViewModel {
         user.isFilled = false;
     }
 
-    public void createUser(String gender, double weight, double height, double age, String workoutIntensity, String name) {
+    public void createUser(String gender, double weight, double height, double age, int workoutIntensity, String name) {
 
 
         double offset;
         double BMR;
         double requiredCalories;
 
-        if (workoutIntensity.equals("1")) {
+        if (workoutIntensity == 1) {
             offset = 1.2;
-        } else if (workoutIntensity.equals("2")) {
+        } else if (workoutIntensity == 2) {
             offset = 1.4;
-        } else if (workoutIntensity.equals("3")) {
+        } else if (workoutIntensity == 3) {
             offset = 1.6;
         } else {
             offset = 1.75;
@@ -33,10 +33,9 @@ public class UserViewModel extends ViewModel {
             BMR = (10*weight) + (6.25*height) - (5*age) + 5;
         } else {
             BMR = (10*weight) + (6.25*height) - (5*age) - 161;
-            System.out.println("test");
         }
 
-        requiredCalories = (int)BMR * offset;
+        requiredCalories = Math.round(BMR * offset);
         user.Gender = gender;
         user.Weight = weight;
         user.Height = height;

@@ -29,8 +29,7 @@ public class EnterUserInfoFragment extends Fragment {
                 gender = gender.toLowerCase(Locale.ROOT);
 
                 if (!(gender.equals("male") || gender.equals("female"))) {
-                    // leave the try catch
-                    int temp = 10 / 0;
+                    throw new Exception("invalid gender");
                 }
                 String tempWeight = binding.enterWeight.getText().toString();
                 double weight = Double.parseDouble(tempWeight);
@@ -38,7 +37,13 @@ public class EnterUserInfoFragment extends Fragment {
                 double height = Double.parseDouble(tempHeight);
                 String tempAge = binding.enterAge.getText().toString();
                 double age = Double.parseDouble(tempAge);
-                String workOutIntensity = binding.enterWorkoutIntensity.getText().toString();
+                String tempWorkOutIntensity = binding.enterWorkoutIntensity.getText().toString();
+                int workOutIntensity = Integer.parseInt(tempWorkOutIntensity);
+
+                if (workOutIntensity < 1 || workOutIntensity > 4) {
+                    throw new Exception("invalid workout intensity");
+                }
+
                 binding.userInfoErrorMessage.setText("");
 
                 UserViewModel viewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
@@ -46,7 +51,7 @@ public class EnterUserInfoFragment extends Fragment {
                 getActivity().getSupportFragmentManager().popBackStack();
 
             } catch (Exception ex) {
-                binding.userInfoErrorMessage.setText("Oh no! The information you entered was not valid. Make sure you type exactly \"male\" or \"female\", and everything else is a whole decimal number");
+                binding.userInfoErrorMessage.setText("Oh no! The information you entered was not valid. Make sure you type exactly \"male\" or \"female\", the workout intensity is within the specified range, and everything else is a number-value.");
             }
 
         });
