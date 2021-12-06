@@ -1,11 +1,21 @@
 package com.tylerjohnston.workoutapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.tylerjohnston.workoutapp.databinding.ActivityMainBinding;
@@ -20,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(binding.getRoot());
 
+
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         binding.materialToolbar.setNavigationOnClickListener((view) -> {
 
@@ -29,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener((menuItem) -> {
-
 
             if (menuItem.getItemId() == R.id.nav_home) {
                 getSupportFragmentManager()
@@ -67,4 +77,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
+
 }

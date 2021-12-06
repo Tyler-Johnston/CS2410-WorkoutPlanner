@@ -29,7 +29,6 @@ public class HomeFragment extends Fragment {
         String dayOfWeek = week[dayNumber-1];
         binding.welcomeMessage.setText("Hello, today is " + dayOfWeek + ". You need to complete the following tasks for the day:  ");
 
-
         if (plans.size() != 0) {
             if (dayOfWeek.equals("Sunday")) {
                 binding.todaysTasks.setText(plans.get(0).Sunday);
