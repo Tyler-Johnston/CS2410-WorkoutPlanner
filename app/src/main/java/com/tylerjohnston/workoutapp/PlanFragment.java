@@ -22,6 +22,10 @@ public class PlanFragment extends Fragment {
         PlanViewModel viewModel = new ViewModelProvider(requireActivity()).get(PlanViewModel.class);
         ObservableArrayList<Plan> plans = viewModel.getPlans();
 
+        viewModel.loadPlans();
+
+        binding.planHint.setText("");
+        
         binding.createPlanButton.setOnClickListener(view -> {
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()

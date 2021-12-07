@@ -1,16 +1,31 @@
 package com.tylerjohnston.workoutapp.Models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Plan {
 
-    public int id;
+    @PrimaryKey(autoGenerate = true)
+    public long id;
+    @ColumnInfo
     public String Title;
-    public String Monday;
-    public String Tuesday;
-    public String Wednesday;
-    public String Thursday;
-    public String Friday;
-    public String Saturday;
+    @ColumnInfo
     public String Sunday;
+    @ColumnInfo
+    public String Monday;
+    @ColumnInfo
+    public String Tuesday;
+    @ColumnInfo
+    public String Wednesday;
+    @ColumnInfo
+    public String Thursday;
+    @ColumnInfo
+    public String Friday;
+    @ColumnInfo
+    public String Saturday;
+    @ColumnInfo
     public String Description;
 
 }
