@@ -7,6 +7,17 @@
     tools:context=".PlanFragment"
     android:background="@color/backgroundColor">
 
+    <TextView
+        android:id="@+id/planHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Click the &quot;+&quot; icon to generate a new plan\n\nClick the &quot;-&quot; icon to remove your current plan upon completion"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/planRecyclerView"
         android:layout_width="match_parent"
@@ -38,16 +49,5 @@
         android:src="@drawable/ic_baseline_remove_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/planHint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Click the &quot;+&quot; icon to generate a new plan\n\nClick the &quot;-&quot; icon to remove your current plan upon completion"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

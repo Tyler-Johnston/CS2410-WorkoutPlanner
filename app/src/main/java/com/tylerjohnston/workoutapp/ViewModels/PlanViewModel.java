@@ -89,13 +89,4 @@ public class PlanViewModel extends AndroidViewModel {
         }).start();
     }
 
-    public boolean isEmpty() {
-        if (db.getPlansDao().getALl() == null) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
 }
