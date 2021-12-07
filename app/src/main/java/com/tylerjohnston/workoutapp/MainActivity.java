@@ -72,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
             }
 
+            if (menuItem.getItemId() == R.id.nav_workout_ideas) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container_view, WorkoutIdeasFragment.class, null)
+                        .addToBackStack(null)
+                        .commit();
+            }
+
             drawerLayout.closeDrawers();
             return true;
         });

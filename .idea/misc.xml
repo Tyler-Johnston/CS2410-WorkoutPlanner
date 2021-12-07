@@ -16,8 +16,10 @@
         <entry key="app/src/main/res/layout/fragment_user_info.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_view_plan.xml" value="0.1707193515704154" />
         <entry key="app/src/main/res/layout/fragment_view_plan_ideas.xml" value="0.196875" />
-        <entry key="app/src/main/res/layout/navigation_header.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_workout_ideas.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/navigation_header.xml" value="0.33" />
         <entry key="app/src/main/res/layout/plan_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/workout_idea_item.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.31666666666666665" />
       </map>

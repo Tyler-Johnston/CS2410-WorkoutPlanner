@@ -17,7 +17,11 @@
         <item
             android:id="@+id/nav_user_info"
             android:icon="@drawable/ic_baseline_person_24"
-            android:title="User Info" />
+            android:title="Calorie Counter" />
+        <item
+            android:id="@+id/nav_workout_ideas"
+            android:icon="@drawable/ic_baseline_pedal_bike_24"
+            android:title="Workout Ideas"/>
     </group>
 
 </menu>

@@ -24,7 +24,6 @@ public class UserViewModel extends AndroidViewModel {
         user.isFilled = false;
         db = Room.databaseBuilder(application, UserDatabase.class, "userdb").build();
         handler = new Handler();
-
     }
 
     public void createUser(String gender, double weight, double height, double age, int workoutIntensity, String name) {
@@ -59,7 +58,6 @@ public class UserViewModel extends AndroidViewModel {
             user.Name = name;
             user.isFilled = true;
             user.Calories = requiredCalories;
-
             user.id = db.getUserDao().create(user);
 
         }).start();
